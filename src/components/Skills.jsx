@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
-import { 
-  FaHtml5, 
-  FaCss3Alt, 
-  FaJs, 
-  FaReact, 
-  FaNode, 
-  FaJava, 
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNode,
+  FaJava,
   FaGithub,
   FaHackerrank,
 } from "react-icons/fa";
-import { 
-  SiCplusplus, 
-  SiTailwindcss, 
+import {
+  SiCplusplus,
+  SiTailwindcss,
   SiMysql,
   SiPostgresql,
   SiMongodb,
@@ -46,7 +46,7 @@ export default function Skills() {
       title: "Backend & Database",
       skills: [
         { icon: FaNode, title: "Node.js", color: "#339933" },
-        { icon:  SiSpringboot, title: "Spring Boot", color: "#000000" },
+        { icon: SiSpringboot, title: "Spring Boot", color: "#000000" },
         { icon: SiMysql, title: "MySQL", color: "#4479A1" },
         { icon: SiPostgresql, title: "PostgreSQL", color: "#4169E1" },
         { icon: SiMongodb, title: "MongoDB", color: "#47A248" }
@@ -93,7 +93,10 @@ export default function Skills() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 py-24" id="Skills">
+    <div
+      className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-24"
+      id="Skills"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -122,7 +125,8 @@ export default function Skills() {
             <motion.div
               key={category.title}
               variants={itemVariants}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6"
+              className="bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl border border-purple-500/10 transition duration-300 hover:bg-gray-900/70 hover:scale-[1.03]"
+              whileHover={{ scale: 1.03 }}
             >
               <h3 className="text-xl font-semibold text-purple-400 mb-6">
                 {category.title}
@@ -131,15 +135,16 @@ export default function Skills() {
                 {category.skills.map((skill) => (
                   <motion.div
                     key={skill.title}
-                    whileHover={{ scale: 1.05 }}
-                    className="flex flex-col items-center gap-3 p-4 bg-gray-700/30 rounded-lg"
+                    whileHover={{
+                      scale: 1.08,
+                      boxShadow: `0 8px 30px ${skill.color}CC`,
+                    }}
+                    className="flex flex-col items-center gap-3 p-4 bg-gray-700/30 rounded-lg transition duration-300 hover:bg-gray-900/70"
                   >
                     <div className="w-12 h-12 flex items-center justify-center">
                       <skill.icon className="w-8 h-8" style={{ color: skill.color }} />
                     </div>
-                    <p className="text-sm font-medium text-gray-300">
-                      {skill.title}
-                    </p>
+                    <p className="text-sm font-medium text-gray-300">{skill.title}</p>
                   </motion.div>
                 ))}
               </div>

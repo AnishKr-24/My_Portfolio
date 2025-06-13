@@ -10,6 +10,7 @@ export default function Navbar() {
     { name: "Home", to: "Homepage" },
     { name: "Project", to: "Projects" },
     { name: "Skills", to: "Skills" },
+    { name: "Certification", to: "Certification" },
     { name: "About", to: "About" },
     { name: "Contact", to: "Contact" }
   ];

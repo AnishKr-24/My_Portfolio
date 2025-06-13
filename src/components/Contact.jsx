@@ -11,16 +11,17 @@ const ContactCard = ({ icon: Icon, title, link }) => (
     whileTap={{ scale: 0.95 }}
     className="block"
   >
-    <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl hover:bg-gray-800/70 transition-colors duration-300">
+    <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl transition-colors duration-300 hover:bg-gray-800/70 hover:shadow-[0_0_15px_rgba(219,39,119,0.6)] hover:border-pink-500 border border-transparent">
       <div className="flex flex-col items-center gap-6">
-        <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-pink-600">
-          <Icon className="w-8 h-8 text-white" />
+        <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-pink-600 transition-colors duration-300 hover:from-pink-600 hover:to-purple-400">
+          <Icon className="w-8 h-8 text-white transition-colors duration-300 hover:text-yellow-300" />
         </div>
-        <h3 className="text-xl font-semibold text-gray-300">{title}</h3>
+        <h3 className="text-xl font-semibold text-gray-300 hover:text-pink-400 transition-colors duration-300">{title}</h3>
       </div>
     </div>
   </motion.a>
 );
+
 
 ContactCard.propTypes = {
   icon: PropTypes.elementType.isRequired,

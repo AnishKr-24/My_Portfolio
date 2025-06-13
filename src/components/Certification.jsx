@@ -17,7 +17,10 @@ const certifications = [
 
 export default function Certification() {
   return (
-    <section className="bg-gray-950 py-16 px-4 text-white">
+    <section
+      id="Certification"
+      className="bg-gray-950 py-16 px-4 text-white"
+    >
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -37,7 +40,14 @@ export default function Certification() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex-1 bg-gray-900 border border-gray-800 rounded-2xl shadow-md p-6 hover:shadow-pink-500/30 transition duration-300"
+              className="
+                flex-1 bg-gray-900 border border-gray-800 rounded-2xl shadow-md p-6
+                hover:shadow-pink-700/70
+                hover:bg-gray-800
+                hover:scale-[1.03]
+                transition-all duration-300
+                cursor-pointer
+              "
             >
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -54,7 +64,15 @@ export default function Certification() {
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 block text-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-pink-600 hover:to-purple-600 transition duration-300"
+                className="
+                  mt-6 block text-center px-4 py-2
+                  bg-gradient-to-r from-purple-700 to-pink-700
+                  text-white font-medium rounded-lg
+                  hover:from-pink-700 hover:to-purple-700
+                  shadow-lg hover:shadow-pink-600/80
+                  active:scale-95
+                  transition-all duration-300
+                "
               >
                 View Certificate
               </a>
