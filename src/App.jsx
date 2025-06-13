@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SEO from './components/SEO';
+import Certification from './components/Certification'; // ✅ fixed spelling & path
 import { defaultSEO } from './config/seo';
 
 function App() {
@@ -18,13 +19,14 @@ function App() {
           description={defaultSEO.description}
           name={defaultSEO.twitter.handle}
         />
-        <Navbar/>
-        <Homepage/>
-        <Projects/>
-        <Skills/>
-        <About/>
-        <Contact/>
-        <Footer/>
+        <Navbar />
+        <Homepage />
+        <Projects />
+        <Skills />
+        <Certification /> {/* ✅ added in correct place */}
+        <About />
+        <Contact />
+        <Footer />
       </div>
     </HelmetProvider>
   );

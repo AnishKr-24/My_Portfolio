@@ -4,35 +4,35 @@ export const defaultSEO = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://aashish-gulshan.netlify.app/',
-    site_name: 'Aashish Gulshan Portfolio',
+    // url: 'https://anish kumar.netlify.app/',
+    // site_name: 'Anish Kumar Portfolio',
   },
   twitter: {
-    handle: '@aashishgulshan',
-    site: '@aashishgulshan',
+    handle: '@AnishKumar70923',
+    site: '@AnishKumar70923',
     cardType: 'summary_large_image',
   },
 };
 
 export const seoData = {
   home: {
-    title: 'Aashish Gulshan - Software Engineer & Tech Instructor',
-    description: 'Welcome to my portfolio. I am a software engineer and tech instructor with expertise in React.js, Node.js, and modern web technologies.',
+    title: 'Anish Kumar - Junior Software Engineer',
+    description: 'Welcome to my portfolio. I am a software engineer with expertise in React.js and modern web technologies.',
   },
   about: {
-    title: 'About Me - Aashish Gulshan',
-    description: 'Learn about my journey, skills, and experience as a software engineer and tech instructor. Discover my passion for technology and teaching.',
+    title: 'About Me - Anish Kumar',
+    description: 'Learn about my journey, skills, and experience as a software engineer. Discover my passion for technology and teaching.',
   },
   projects: {
-    title: 'Projects - Aashish Gulshan',
+    title: 'Projects - Anish Kumar',
     description: 'Explore my portfolio of web development projects, including e-commerce solutions, news applications, and more.',
   },
   skills: {
-    title: 'Skills & Expertise - Aashish Gulshan',
+    title: 'Skills & Expertise - Anish Kumar',
     description: 'Discover my technical skills in web development, programming languages, frameworks, and tools.',
   },
   contact: {
-    title: 'Contact - Aashish Gulshan',
+    title: 'Contact - Anish Kumar',
     description: 'Get in touch with me for collaboration, opportunities, or any queries about my work and services.',
   },
 };
