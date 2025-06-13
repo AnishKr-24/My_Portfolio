@@ -130,19 +130,19 @@ export default function Projects() {
     {
       image:
         "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      title: "Online Education Platform",
+      title: "My Portfolio",
       description: [
-        "Developed the website using React for a component-based structure and Tailwind CSS for rapid, responsive styling with clean utility-first classes",
-        "Ensured a fully responsive layout using Tailwind CSS, making the website accessible and visually consistent across all devices.",
-        "Used JavaScript and React to build interactive elements like dropdowns, navigation menus, and chat support for better user engagement.",
-        "Followed best practices by creating reusable UI components in React, resulting in clean, maintainable, and scalable front-end architecture",
+        "Experienced in creating modern, responsive, and visually appealing web interfaces using HTML, Tailwind CSS, and best UI/UX practices to deliver seamless user experiences.",
+        "Skilled in JavaScript and React.js for building dynamic, efficient, and scalable single-page applications, with a strong focus on component-based architecture and state management.",
+        "Adept at collaborating with cross-functional teams to translate design concepts into fully functional web applications, maintaining code quality, performance optimization, and accessibility standards.",
       ],
-      githubLink: "https://github.com/AnishKr-24/Website_College",
+      githubLink: "https://github.com/AnishKr-24/My_Portfolio",
       date: "Fabuary 2025",
-      tags: ["React", "Redux", "Tailwind CSS", "RESTful API"],
+      tags: ["React", "Redux", "Tailwind CSS", "UI/UX"],
       featured: false,
     },
-    {
+
+     {
       image:
         "https://images.unsplash.com/photo-1592589185394-1849d2e75d75?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "Digital Yatra",
@@ -151,7 +151,7 @@ export default function Projects() {
         "JavaScript and React were used to implement real-time flight search and filtering functionality, allowing users to easily find flights based on criteria like date, destination, and airline",
         "Built responsive and reusable UI components to ensure a consistent and intuitive user experience across devices",
       ],
-      githubLink: "https://github.com/AnishKr-24/Digital-Yatra",
+      githubLink: "https://github.com/AnishKr-24/DigitalYatraNew",
       date: "January 2025",
       tags: ["React", "Tailwind CSS", "Authentication"],
       featured: false,
@@ -171,6 +171,7 @@ export default function Projects() {
       tags: ["HTML", "CSS", "Thymeleaf", "Spring Boot", "Spring MVC", "Weather Api"],
       featured: false,
     },
+   
     {
       image:
         "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
@@ -185,6 +186,7 @@ export default function Projects() {
       tags: ["React", "MongoDB", "Node.js", "Express.js"],
       featured: false,
     },
+  
   ];
 
   const containerVariants = {
