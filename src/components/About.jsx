@@ -6,7 +6,7 @@ export default function About() {
     {
       icon: <FaCode className="w-6 h-6" />,
       title: "Junior Software Engineer",
-      description: "Specializing in building scalable",
+      description: " specializing in building scalable and efficient web applications using modern technologies.",
     },
     {
       icon: <FaLightbulb className="w-6 h-6" />,
