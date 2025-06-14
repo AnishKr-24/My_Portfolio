@@ -29,7 +29,7 @@ export default function Homepage() {
   return (
     <div
       id="Homepage"
-      className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white pt-28"
+      className="min-h-screen bg-gray-900 text-white pt-28"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-16">

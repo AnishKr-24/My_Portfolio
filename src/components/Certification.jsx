@@ -19,7 +19,7 @@ export default function Certification() {
   return (
     <section
       id="Certification"
-      className="bg-gray-950 py-16 px-4 text-white"
+      className="bg-gray-900 py-16 px-4 text-white"
     >
       <div className="max-w-4xl mx-auto">
         <motion.h2
