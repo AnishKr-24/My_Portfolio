@@ -1,8 +1,13 @@
+
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaCalendar } from "react-icons/fa";
 import PropTypes from "prop-types";
 import SEO from './SEO';
 import { seoData } from '../config/seo';
+import PortfolioImage from '../assets/image/Portfolio.png';
+import DigitalyatraImage from '../assets/image/Digitalyatra.png';
+import WeatherImage from '../assets/image/Weather.png';
+import EventImage from '../assets/image/Event.png';
 
 const ProjectCard = ({ image, title, description, githubLink, liveLink, date, tags, featured }) => (
   <motion.div
@@ -128,8 +133,7 @@ ProjectCard.propTypes = {
 export default function Projects() {
   const projectsData = [
     {
-      image:
-        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      image: PortfolioImage,
       title: "My Portfolio",
       description: [
         "Experienced in creating modern, responsive, and visually appealing web interfaces using HTML, Tailwind CSS, and best UI/UX practices to deliver seamless user experiences.",
@@ -143,8 +147,7 @@ export default function Projects() {
     },
 
      {
-      image:
-        "https://images.unsplash.com/photo-1592589185394-1849d2e75d75?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: DigitalyatraImage,
       title: "Digital Yatra",
       description: [
         "Developed the frontend of the Digi Yatra web application using React, JavaScript, and Tailwind CSS, enabling smooth flight search, passenger detail entry, seat selection, and self-check-in.",
@@ -157,35 +160,33 @@ export default function Projects() {
       featured: false,
     },
 
-    {
-      image:
-        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      title: "Weather App",
-      description: [
-        "Built a web application using Spring Boot to retrieve and display real-time weather data for any city using the OpenWeatherMap API.",
-        "Integrated Thyme leaf for dynamic UI rendering and used Rest Template for consuming RESTful API services",
-        "Utilized Java, Spring Boot, Maven, HTML/CSS, and the OpenWeatherMap API to deliver a responsive and user-friendly weather dashboard.",
-      ],
-      githubLink: "https://github.com/AnishKr-24/Weather-Application",
-      date: "April 2025",
-      tags: ["HTML", "CSS", "Thymeleaf", "Spring Boot", "Spring MVC", "Weather Api"],
-      featured: false,
-    },
+    // {
+    //   image: WeatherImage,
+    //   title: "Weather App",
+    //   description: [
+    //     "Built a web application using Spring Boot to retrieve and display real-time weather data for any city using the OpenWeatherMap API.",
+    //     "Integrated Thyme leaf for dynamic UI rendering and used Rest Template for consuming RESTful API services",
+    //     "Utilized Java, Spring Boot, Maven, HTML/CSS, and the OpenWeatherMap API to deliver a responsive and user-friendly weather dashboard.",
+    //   ],
+    //   githubLink: "https://github.com/AnishKr-24/Weather-Application",
+    //   date: "April 2025",
+    //   tags: ["HTML", "CSS", "Thymeleaf", "Spring Boot", "Spring MVC", "Weather Api"],
+    //   featured: false,
+    // },
    
-    {
-      image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      title: "Event Management System",
-      description: [
-        "Built a full-stack Event Management System using the MERN stack (MongoDB, Express.js, React, Node.js) as part of a 4-member team, enabling event creation, user registration, and real-time attendee tracking",
-        "Developed responsive and interactive UI components using React, ensuring a seamless user experience for organizers and participants across devices.",
-        "Collaborated on backend development with Express.js and MongoDB, implementing RESTful APIs, user authentication, and efficient data handling for smooth system performance.",
-      ],
-      githubLink: "https://github.com/AnishKr-24/Event_Mern_stack_Project",
-      date: "March 2024",
-      tags: ["React", "MongoDB", "Node.js", "Express.js"],
-      featured: false,
-    },
+    // {
+    //   image: EventImage,
+    //   title: "Event Management System",
+    //   description: [
+    //     "Built a full-stack Event Management System using the MERN stack (MongoDB, Express.js, React, Node.js) as part of a 4-member team, enabling event creation, user registration, and real-time attendee tracking",
+    //     "Developed responsive and interactive UI components using React, ensuring a seamless user experience for organizers and participants across devices.",
+    //     "Collaborated on backend development with Express.js and MongoDB, implementing RESTful APIs, user authentication, and efficient data handling for smooth system performance.",
+    //   ],
+    //   githubLink: "https://github.com/AnishKr-24/Event_Mern_stack_Project",
+    //   date: "March 2024",
+    //   tags: ["React", "MongoDB", "Node.js", "Express.js"],
+    //   featured: false,
+    // },
   
   ];
 
