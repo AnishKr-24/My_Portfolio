@@ -52,9 +52,9 @@ export default function Homepage() {
               ))}
             </motion.div>
 
-            {/* Animated Name */}
+            {/* Animated Name (smaller size) */}
             <motion.h1
-              className="text-5xl md:text-6xl lg:text-7xl font-extrabold bg-clip-text text-transparent 
+              className="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-clip-text text-transparent 
                          bg-gradient-to-r from-purple-500 to-pink-500 flex flex-wrap justify-center lg:justify-start"
               variants={container}
               initial="hidden"
