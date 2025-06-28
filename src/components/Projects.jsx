@@ -1,3 +1,5 @@
+
+
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaCalendar } from "react-icons/fa";
 import PropTypes from "prop-types";
@@ -189,6 +191,36 @@ export default function Projects() {
       tags: ["React", "Tailwind CSS", "Authentication"],
       featured: false,
     },
+
+     // Uncomment these if you want to include them
+    // {
+    //   image: WeatherImage,
+    //   title: "Weather App",
+    //   description: [
+    //     "Built a web application using Spring Boot to retrieve and display real-time weather data for any city using the OpenWeatherMap API.",
+    //     "Integrated Thyme leaf for dynamic UI rendering and used Rest Template for consuming RESTful API services",
+    //     "Utilized Java, Spring Boot, Maven, HTML/CSS, and the OpenWeatherMap API to deliver a responsive and user-friendly weather dashboard.",
+    //   ],
+    //   githubLink: "https://github.com/AnishKr-24/Weather-Application",
+    //   date: "April 2025",
+    //   tags: ["HTML", "CSS", "Thymeleaf", "Spring Boot", "Spring MVC", "Weather Api"],
+    //   featured: false,
+    // },
+
+    // {
+    //   image: EventImage,
+    //   title: "Event Management System",
+    //   description: [
+    //     "Built a full-stack Event Management System using the MERN stack (MongoDB, Express.js, React, Node.js) as part of a 4-member team, enabling event creation, user registration, and real-time attendee tracking",
+    //     "Developed responsive and interactive UI components using React, ensuring a seamless user experience for organizers and participants across devices.",
+    //     "Collaborated on backend development with Express.js and MongoDB, implementing RESTful APIs, user authentication, and efficient data handling for smooth system performance.",
+    //   ],
+    //   githubLink: "https://github.com/AnishKr-24/Event_Mern_stack_Project",
+    //   date: "March 2024",
+    //   tags: ["React", "MongoDB", "Node.js", "Express.js"],
+    //   featured: false,
+    // },
+
   ];
 
   return (
