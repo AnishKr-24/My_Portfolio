@@ -39,7 +39,7 @@ export default function Homepage() {
 
             {/* Animated "Hi there! I'm" */}
             <motion.div
-              className="text-xl md:text-2xl lg:text-3xl font-semibold text-purple-400 flex flex-wrap justify-center lg:justify-start"
+              className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-400 flex flex-wrap justify-center lg:justify-start"
               variants={container}
               initial="hidden"
               whileInView="visible"
@@ -55,7 +55,7 @@ export default function Homepage() {
             {/* Animated Name (smaller size) */}
             <motion.h1
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-clip-text text-transparent 
-                         bg-gradient-to-r from-purple-500 to-pink-500 flex flex-wrap justify-center lg:justify-start"
+                         bg-gradient-to-r from-blue-500 to-cyan-500 flex flex-wrap justify-center lg:justify-start"
               variants={container}
               initial="hidden"
               whileInView="visible"
@@ -69,8 +69,8 @@ export default function Homepage() {
             </motion.h1>
 
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              <span className="text-purple-400 font-medium">
-                A <strong className="text-violet-500">Junior Software Engineer</strong> passionate about emerging technologies and crafting scalable digital solutions.
+              <span className="text-blue-400 font-medium">
+                A <strong className="text-cyan-400">Junior Software Engineer</strong> passionate about emerging technologies and crafting scalable digital solutions.
               </span>
             </p>
 
@@ -84,8 +84,8 @@ export default function Homepage() {
                 href="https://drive.google.com/file/d/1Ob_v0KxEcxBnJ65JPk-yyr4ESomhN-6k/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold
-                           shadow-md hover:from-purple-700 hover:to-pink-700 hover:shadow-pink-500/40 transition duration-300"
+                className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold
+                           shadow-md hover:from-blue-700 hover:to-cyan-700 hover:shadow-cyan-500/40 transition duration-300"
               >
                 Download Resume
               </a>
@@ -94,8 +94,8 @@ export default function Homepage() {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="px-8 py-3 rounded-full border-2 border-purple-500 text-purple-400 font-semibold
-                           hover:bg-purple-600 hover:text-white transition duration-300 cursor-pointer"
+                className="px-8 py-3 rounded-full border-2 border-blue-500 text-blue-400 font-semibold
+                           hover:bg-blue-600 hover:text-white transition duration-300 cursor-pointer"
               >
                 Contact Me
               </Link>
@@ -110,8 +110,8 @@ export default function Homepage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="text-gray-400 hover:text-purple-400 transition duration-300 transform
-                             hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.6)]"
+                  className="text-gray-400 hover:text-blue-400 transition duration-300 transform
+                             hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(37,99,235,0.6)]"
                 >
                   {link.icon}
                 </a>
@@ -122,15 +122,18 @@ export default function Homepage() {
           {/* RIGHT IMAGE */}
           <div className="lg:w-1/2">
             <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto group">
-              <div
-                className="absolute inset-0 bg-gradient-to-tr from-purple-700 to-pink-600 rounded-full blur-2xl
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5 }}
+                className="absolute inset-0 bg-gradient-to-tr from-blue-700 to-cyan-600 rounded-full blur-2xl
                            opacity-30 group-hover:opacity-50 transition duration-500"
-              />
+              ></motion.div>
               <img
                 src={Photo}
                 alt="Anish Kumar"
-                className="relative w-full h-full object-cover rounded-full shadow-xl border-4 border-purple-600/40
-                           transform transition duration-500 group-hover:scale-105 group-hover:shadow-purple-600/40"
+                className="relative w-full h-full object-cover rounded-full shadow-xl border-4 border-blue-600/40
+                           transform transition duration-500 group-hover:scale-105 group-hover:shadow-blue-600/40"
               />
             </div>
           </div>

@@ -36,7 +36,7 @@ export default function Footer() {
 
         {/* About Me */}
         <div>
-          <h3 className="text-xl font-semibold text-purple-400">Anish Kumar</h3>
+          <h3 className="text-xl font-semibold text-blue-400">Anish Kumar</h3>
           <p className="text-sm text-gray-400 mt-2 leading-relaxed">
             Junior Software Engineer crafting innovative solutions with modern technologies.
             Passionate about creating exceptional user experiences.
@@ -49,7 +49,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="text-gray-400 hover:text-purple-500 transition-colors duration-300"
+                className="text-gray-400 hover:text-blue-500 transition-colors duration-300"
               >
                 {icon}
               </a>
@@ -65,7 +65,7 @@ export default function Footer() {
               <li key={index}>
                 <a
                   href={href}
-                  className="hover:text-purple-400 transition-colors duration-300"
+                  className="hover:text-blue-400 transition-colors duration-300"
                 >
                   ↗ {name}
                 </a>
@@ -79,13 +79,13 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-2">Contact Info</h3>
           <ul className="text-sm text-gray-400 space-y-2">
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-purple-400" /> New Delhi, India
+              <FaMapMarkerAlt className="text-blue-400" /> New Delhi, India
             </li>
             <li className="flex items-center gap-2">
-              <FaPhoneAlt className="text-purple-400" /> +91 6200402982
+              <FaPhoneAlt className="text-blue-400" /> +91 6200402982
             </li>
             <li className="flex items-center gap-2">
-              <SiGmail className="text-purple-400" /> anishkuamrvir0@gmail.com
+              <SiGmail className="text-blue-400" /> anishkuamrvir0@gmail.com
             </li>
           </ul>
         </div>
@@ -102,7 +102,7 @@ export default function Footer() {
               placeholder="Enter your email"
               className="px-3 py-2 rounded-md text-gray-900 w-full outline-none"
             />
-            <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-4 py-2 rounded-md hover:from-purple-700 hover:to-blue-600 transition-all duration-300">
+            <button className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-2 rounded-md hover:from-blue-700 hover:to-cyan-600 transition-all duration-300">
               Subscribe
             </button>
           </div>
@@ -112,8 +112,8 @@ export default function Footer() {
       {/* Bottom Footer */}
       <div className="mt-10 text-center text-sm text-gray-500 border-t border-gray-800 pt-4">
         <p>
-          Crafted with <FaHeart className="inline text-pink-500 animate-pulse mx-1" />
-          by <span className="text-purple-400 font-medium">Anish Kumar</span> © {new Date().getFullYear()}
+          Crafted with <FaHeart className="inline text-red-500 animate-pulse mx-1" />
+          by <span className="text-blue-400 font-medium">Anish Kumar</span> © {new Date().getFullYear()}
         </p>
       </div>
     </footer>

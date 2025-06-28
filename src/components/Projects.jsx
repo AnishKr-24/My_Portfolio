@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaCalendar } from "react-icons/fa";
 import PropTypes from "prop-types";
@@ -19,7 +18,7 @@ const ProjectCard = ({ image, title, description, githubLink, liveLink, date, ta
   >
     <div
       className="h-full overflow-hidden rounded-2xl bg-gray-900/70 backdrop-blur-md ring-1 ring-gray-800/90
-      hover:ring-purple-700 hover:shadow-2xl shadow-lg
+      hover:ring-blue-700 hover:shadow-2xl shadow-lg
       transform hover:-translate-y-3 hover:rotate-1
       transition-all duration-300"
     >
@@ -45,14 +44,14 @@ const ProjectCard = ({ image, title, description, githubLink, liveLink, date, ta
           <div className="flex items-center justify-between gap-4">
             <h3
               className="text-xl md:text-2xl font-bold text-white
-              group-hover:text-purple-400
-              group-hover:drop-shadow-[0_0_10px_rgba(167,139,250,0.85)]
+              group-hover:text-blue-400
+              group-hover:drop-shadow-[0_0_10px_rgba(37,99,235,0.85)]
               transition duration-300"
             >
               {title}
             </h3>
             {featured && (
-              <span className="px-3 py-1 text-xs font-medium text-purple-400 border border-purple-400 rounded-full whitespace-nowrap bg-purple-500/20">
+              <span className="px-3 py-1 text-xs font-medium text-blue-400 border border-blue-400 rounded-full whitespace-nowrap bg-blue-500/20">
                 Featured
               </span>
             )}
@@ -62,9 +61,9 @@ const ProjectCard = ({ image, title, description, githubLink, liveLink, date, ta
             {tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-3 py-1 text-xs font-medium text-purple-300 rounded-full border border-purple-600
-                bg-purple-700/10
-                hover:bg-gradient-to-r hover:from-purple-700 hover:via-pink-600 hover:to-purple-700
+                className="px-3 py-1 text-xs font-medium text-blue-300 rounded-full border border-blue-600
+                bg-blue-700/10
+                hover:bg-gradient-to-r hover:from-blue-700 hover:via-cyan-600 hover:to-blue-700
                 hover:text-white transition-all duration-500 ease-in-out"
               >
                 {tag}
@@ -76,14 +75,14 @@ const ProjectCard = ({ image, title, description, githubLink, liveLink, date, ta
         {/* Description */}
         <div className="space-y-4 mb-8">
           <div className="flex items-center gap-2 text-sm text-gray-400">
-            <FaCalendar className="w-4 h-4 text-purple-500" />
+            <FaCalendar className="w-4 h-4 text-blue-500" />
             <span>{date}</span>
           </div>
           <ul className="space-y-3">
             {description.map((point, index) => (
               <li key={index} className="text-gray-300 text-sm leading-relaxed flex items-start gap-3 group/item">
-                <span className="text-purple-500 mt-1">•</span>
-                <span className="group-hover/item:text-purple-300 transition-colors duration-300">{point}</span>
+                <span className="text-blue-500 mt-1">•</span>
+                <span className="group-hover/item:text-blue-300 transition-colors duration-300">{point}</span>
               </li>
             ))}
           </ul>
@@ -95,7 +94,7 @@ const ProjectCard = ({ image, title, description, githubLink, liveLink, date, ta
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2.5 bg-purple-700 hover:bg-purple-800 active:scale-95
+            className="flex items-center gap-2 px-4 py-2.5 bg-blue-700 hover:bg-blue-800 active:scale-95
             text-white rounded-lg text-sm font-medium transition-transform duration-150"
           >
             <FaGithub className="w-4 h-4" />
@@ -106,7 +105,7 @@ const ProjectCard = ({ image, title, description, githubLink, liveLink, date, ta
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2.5 bg-pink-700 hover:bg-pink-800 active:scale-95
+              className="flex items-center gap-2 px-4 py-2.5 bg-cyan-700 hover:bg-cyan-800 active:scale-95
               text-white rounded-lg text-sm font-medium transition-transform duration-150"
             >
               <FaExternalLinkAlt className="w-4 h-4" />
@@ -124,7 +123,7 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.arrayOf(PropTypes.string).isRequired,
   githubLink: PropTypes.string.isRequired,
-  liveLink: PropTypes.string.isRequired,
+  liveLink: PropTypes.string, // Changed to not be required as it's conditionally rendered
   date: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   featured: PropTypes.bool,
@@ -146,7 +145,7 @@ export default function Projects() {
       featured: false,
     },
 
-     {
+      {
       image: DigitalyatraImage,
       title: "Digital Yatra",
       description: [
@@ -173,7 +172,7 @@ export default function Projects() {
     //   tags: ["HTML", "CSS", "Thymeleaf", "Spring Boot", "Spring MVC", "Weather Api"],
     //   featured: false,
     // },
-   
+    
     // {
     //   image: EventImage,
     //   title: "Event Management System",
@@ -187,7 +186,7 @@ export default function Projects() {
     //   tags: ["React", "MongoDB", "Node.js", "Express.js"],
     //   featured: false,
     // },
-  
+ 
   ];
 
   const containerVariants = {
@@ -215,10 +214,10 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent mb-4">
             Featured Projects & Experience
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-600 mx-auto mb-8 rounded-full"></div>
           <p className="text-gray-300 max-w-2xl mx-auto">
             A curated collection of my professional work and personal projects,
             showcasing expertise in full-stack development, system design, and

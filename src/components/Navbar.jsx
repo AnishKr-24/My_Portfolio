@@ -35,7 +35,7 @@ export default function Navbar() {
               spy={true}
               smooth={true}
               duration={500}
-              className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent cursor-pointer"
+              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent cursor-pointer"
             >
               <span className="hidden lg:inline">Anish Kumar</span>
               <span className="lg:hidden">AN</span>
@@ -57,8 +57,8 @@ export default function Navbar() {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    className="text-gray-300 hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors duration-200"
-                    activeClass="text-purple-400"
+                    className="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors duration-200"
+                    activeClass="text-blue-400"
                   >
                     {item.name}
                   </Link>
@@ -72,7 +72,7 @@ export default function Navbar() {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-purple-400 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-blue-400 focus:outline-none"
             >
               {isOpen ? (
                 <HiX className="block h-6 w-6" />
@@ -99,8 +99,8 @@ export default function Navbar() {
               spy={true}
               smooth={true}
               duration={500}
-              className="text-gray-300 hover:text-purple-400 block px-3 py-2 rounded-md text-base font-medium cursor-pointer transition-colors duration-200"
-              activeClass="text-purple-400"
+              className="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium cursor-pointer transition-colors duration-200"
+              activeClass="text-blue-400"
               onClick={() => setIsOpen(false)}
             >
               {item.name}

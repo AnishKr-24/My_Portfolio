@@ -102,10 +102,10 @@ export default function Skills() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent mb-4">
             Technical Skills
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-600 mx-auto mb-8 rounded-full"></div>
           <p className="text-gray-300 max-w-2xl mx-auto mb-16">
             A comprehensive overview of my technical expertise and the tools I use to build modern applications.
           </p>
@@ -122,10 +122,10 @@ export default function Skills() {
             <motion.div
               key={category.title}
               variants={itemVariants}
-              className="bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl border border-purple-500/10 transition duration-300 hover:bg-gray-900/70 hover:scale-[1.03]"
+              className="bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl border border-blue-500/10 transition duration-300 hover:bg-gray-900/70 hover:scale-[1.03]"
               whileHover={{ scale: 1.03 }}
             >
-              <h3 className="text-xl font-semibold text-purple-400 mb-6">
+              <h3 className="text-xl font-semibold text-blue-400 mb-6">
                 {category.title}
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">

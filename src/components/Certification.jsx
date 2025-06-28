@@ -48,7 +48,7 @@ export default function Certification() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"
+          className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"
         >
           Certifications
         </motion.h2>
@@ -61,7 +61,7 @@ export default function Certification() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex-1 bg-gray-900 border border-gray-800 rounded-2xl shadow-md p-6 hover:shadow-pink-700/70 hover:bg-gray-800 hover:scale-[1.03] transition-all duration-300 cursor-pointer"
+              className="flex-1 bg-gray-900 border border-gray-800 rounded-2xl shadow-md p-6 hover:shadow-cyan-700/70 hover:bg-gray-800 hover:scale-[1.03] transition-all duration-300 cursor-pointer"
             >
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">{cert.title}</h3>
@@ -74,7 +74,7 @@ export default function Certification() {
               </div>
               <button
                 onClick={() => handleShowModal(cert.link)}
-                className="mt-6 w-full text-center px-4 py-2 bg-gradient-to-r from-purple-700 to-pink-700 text-white font-medium rounded-lg hover:from-pink-700 hover:to-purple-700 shadow-lg hover:shadow-pink-600/80 active:scale-95 transition-all duration-300"
+                className="mt-6 w-full text-center px-4 py-2 bg-gradient-to-r from-blue-700 to-cyan-700 text-white font-medium rounded-lg hover:from-cyan-700 hover:to-blue-700 shadow-lg hover:shadow-cyan-600/80 active:scale-95 transition-all duration-300"
               >
                 Preview Certificate
               </button>

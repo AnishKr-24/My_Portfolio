@@ -30,10 +30,10 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent mb-4">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-600 mx-auto mb-8 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-600 mx-auto mb-8 rounded-full"></div>
         </motion.div>
 
         <motion.div
@@ -67,7 +67,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 8px 30px rgba(168, 85, 247, 0.7)", // stronger purple-pink glow
+                boxShadow: "0 8px 30px rgba(37, 99, 235, 0.7)", // blue glow
                 backgroundColor: "rgba(55, 65, 81, 0.95)", // darker gray background on hover
               }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -75,7 +75,7 @@ export default function About() {
               className="relative p-6 bg-gray-800 rounded-xl transition-all cursor-pointer"
             >
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <div className="inline-flex p-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+                <div className="inline-flex p-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
                   {feature.icon}
                 </div>
               </div>
@@ -100,9 +100,9 @@ export default function About() {
             rel="noopener noreferrer"
             className="
               inline-flex items-center px-6 py-3 rounded-full
-              bg-gradient-to-r from-purple-700 to-pink-700
+              bg-gradient-to-r from-blue-700 to-cyan-700
               text-white font-medium
-              hover:shadow-lg hover:shadow-pink-600/70
+              hover:shadow-lg hover:shadow-cyan-600/70
               active:scale-95
               transition-all duration-300
               cursor-pointer
