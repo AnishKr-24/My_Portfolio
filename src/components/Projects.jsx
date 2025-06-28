@@ -239,7 +239,7 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-600 bg-clip-text text-transparent mb-4">
-            Featured Projects & Experience
+            Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-600 mx-auto mb-8 rounded-full"></div>
           <p className="text-gray-300 max-w-2xl mx-auto">
