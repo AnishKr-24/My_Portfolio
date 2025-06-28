@@ -71,44 +71,23 @@ export default function Skills() {
     }
   ];
 
-  // Variants for staggering the main skill categories
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1 // Stagger each category card
+        staggerChildren: 0.1
       }
     }
   };
 
-  // Variants for individual skill category cards (the larger boxes)
-  const categoryCardVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.95 },
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
       transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-        duration: 0.6
-      }
-    }
-  };
-
-  // Variants for individual skill items (the smaller boxes within categories)
-  const skillItemVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        damping: 15,
-        stiffness: 120
+        duration: 0.5
       }
     }
   };
@@ -133,7 +112,7 @@ export default function Skills() {
         </motion.div>
 
         <motion.div
-          variants={containerVariants} // Applies stagger to category cards
+          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -142,29 +121,21 @@ export default function Skills() {
           {skillCategories.map((category) => (
             <motion.div
               key={category.title}
-              variants={categoryCardVariants} // Entry animation for each category card
+              variants={itemVariants}
               className="bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-xl border border-blue-500/10 transition duration-300 hover:bg-gray-900/70 hover:scale-[1.03]"
               whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }} // Added for subtle click feedback
             >
               <h3 className="text-xl font-semibold text-blue-400 mb-6">
                 {category.title}
               </h3>
-              <motion.div
-                variants={containerVariants} // Re-using containerVariants for stagger within this category
-                initial="hidden"
-                // The 'animate' property is implicitly handled by the parent's 'whileInView' and 'containerVariants'
-                className="grid grid-cols-2 sm:grid-cols-3 gap-6"
-              >
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                 {category.skills.map((skill) => (
                   <motion.div
                     key={skill.title}
-                    variants={skillItemVariants} // Entry animation for each individual skill item
                     whileHover={{
                       scale: 1.08,
                       boxShadow: `0 8px 30px ${skill.color}CC`,
                     }}
-                    whileTap={{ scale: 0.95 }} // Added for subtle click feedback
                     className="flex flex-col items-center gap-3 p-4 bg-gray-700/30 rounded-lg transition duration-300 hover:bg-gray-900/70"
                   >
                     <div className="w-12 h-12 flex items-center justify-center">
@@ -173,7 +144,7 @@ export default function Skills() {
                     <p className="text-sm font-medium text-gray-300">{skill.title}</p>
                   </motion.div>
                 ))}
-              </motion.div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
