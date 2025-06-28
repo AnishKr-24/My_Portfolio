@@ -5,21 +5,19 @@ import SEO from './SEO';
 import { seoData } from '../config/seo';
 import PortfolioImage from '../assets/image/Portfolio.png';
 import DigitalyatraImage from '../assets/image/Digitalyatra.png';
-import WeatherImage from '../assets/image/Weather.png';
-import EventImage from '../assets/image/Event.png';
+// import WeatherImage from '../assets/image/Weather.png';
+// import EventImage from '../assets/image/Event.png';
 
-// Variants for the overall container of project cards, to stagger them
 const projectsContainerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15, // Stagger each ProjectCard's entry
+      staggerChildren: 0.15,
     },
   },
 };
 
-// Variants for each individual ProjectCard's entrance
 const cardEntryVariants = {
   hidden: { opacity: 0, y: 70, rotateZ: -3, scale: 0.85 },
   visible: {
@@ -32,66 +30,54 @@ const cardEntryVariants = {
       damping: 10,
       stiffness: 80,
       duration: 0.6,
-      ease: [0.17, 0.67, 0.83, 0.67], // Custom ease for a smooth, lively feel
+      ease: [0.17, 0.67, 0.83, 0.67],
     },
   },
 };
 
-// Variants for individual tags
 const tagVariants = {
   hidden: { opacity: 0, y: 10 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.3 } }
 };
 
-
 const ProjectCard = ({ image, title, description, githubLink, liveLink, date, tags, featured }) => (
   <motion.div
-    variants={cardEntryVariants} // Apply unique entrance animation to each card
+    variants={cardEntryVariants}
     className={`group relative isolate ${featured ? 'md:col-span-2' : ''}`}
   >
     <motion.div
-      className="h-full overflow-hidden rounded-2xl bg-gray-900/70 backdrop-blur-md ring-1 ring-gray-800/90
-      transform transition-all duration-300" // Keep base styles and transform for smooth transition
+      className="h-full overflow-hidden rounded-2xl bg-gray-900/70 backdrop-blur-md ring-1 ring-gray-800/90 transform transition-all duration-300"
       whileHover={{
-        scale: 1.02, // Subtle scale up on hover
-        boxShadow: "0 12px 45px rgba(30, 144, 255, 0.5)", // More prominent blue glow
-        rotateZ: 0.5, // Subtle rotation on hover
-        y: -5 // Slightly lift up
+        scale: 1.02,
+        boxShadow: "0 12px 45px rgba(30, 144, 255, 0.5)",
+        rotateZ: 0.5,
+        y: -5
       }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }} // Smooth spring for hover
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
-      {/* Image Container */}
       <div className="relative">
         <div className="aspect-[16/9] overflow-hidden relative rounded-2xl">
-          <motion.img // Added motion to image for more control
+          <motion.img
             src={image}
             alt={title}
             className="w-full h-full object-cover transform transition-transform duration-700"
-            // Original group-hover scale is still active, framer-motion adds to it.
-            // If conflict, prefer framer-motion or fine-tune. Keeping both for a layered effect.
-            whileHover={{ scale: 1.15 }} // Enhanced image zoom on card hover
+            whileHover={{ scale: 1.15 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           />
           <div
-            className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/80 to-gray-900/95
-            group-hover:via-gray-900/95 group-hover:to-black/95 transition-colors duration-300 rounded-2xl"
+            className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/80 to-gray-900/95 group-hover:via-gray-900/95 group-hover:to-black/95 transition-colors duration-300 rounded-2xl"
           ></div>
         </div>
       </div>
 
-      {/* Content */}
       <div className="relative p-6 md:p-8">
-        {/* Header */}
         <div className="flex flex-col gap-4 mb-8">
           <div className="flex items-center justify-between gap-4">
-            <motion.h3 // Added motion to title
+            <motion.h3
               initial={{ x: 0 }}
-              whileHover={{ x: 5 }} // Slight slide on hover
+              whileHover={{ x: 5 }}
               transition={{ type: "spring", stiffness: 400, damping: 30 }}
-              className="text-xl md:text-2xl font-bold text-white
-              group-hover:text-blue-400
-              group-hover:drop-shadow-[0_0_10px_rgba(37,99,235,0.85)]
-              transition duration-300"
+              className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 group-hover:drop-shadow-[0_0_10px_rgba(37,99,235,0.85)] transition duration-300"
             >
               {title}
             </motion.h3>
@@ -102,20 +88,17 @@ const ProjectCard = ({ image, title, description, githubLink, liveLink, date, ta
             )}
           </div>
 
-          <motion.div // Container for tags to stagger their entry
+          <motion.div
             initial="hidden"
             animate="visible"
-            variants={projectsContainerVariants} // Reusing container for stagger effect
+            variants={projectsContainerVariants}
             className="flex flex-wrap gap-2"
           >
             {tags.map((tag, index) => (
               <motion.span
                 key={index}
-                variants={tagVariants} // Apply entry animation to each tag
-                className="px-3 py-1 text-xs font-medium text-blue-300 rounded-full border border-blue-600
-                bg-blue-700/10
-                hover:bg-gradient-to-r hover:from-blue-700 hover:via-cyan-600 hover:to-blue-700
-                hover:text-white transition-all duration-500 ease-in-out"
+                variants={tagVariants}
+                className="px-3 py-1 text-xs font-medium text-blue-300 rounded-full border border-blue-600 bg-blue-700/10 hover:bg-gradient-to-r hover:from-blue-700 hover:via-cyan-600 hover:to-blue-700 hover:text-white transition-all duration-500 ease-in-out"
               >
                 {tag}
               </motion.span>
@@ -123,7 +106,6 @@ const ProjectCard = ({ image, title, description, githubLink, liveLink, date, ta
           </motion.div>
         </div>
 
-        {/* Description */}
         <div className="space-y-4 mb-8">
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <FaCalendar className="w-4 h-4 text-blue-500" />
@@ -139,27 +121,24 @@ const ProjectCard = ({ image, title, description, githubLink, liveLink, date, ta
           </ul>
         </div>
 
-        {/* Actions */}
         <div className="flex flex-wrap gap-4">
-          <motion.a // Added motion to buttons
+          <motion.a
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            whileTap={{ scale: 0.9 }} // Prominent press animation
-            className="flex items-center gap-2 px-4 py-2.5 bg-blue-700 hover:bg-blue-800
-            text-white rounded-lg text-sm font-medium transition-transform duration-150"
+            whileTap={{ scale: 0.9 }}
+            className="flex items-center gap-2 px-4 py-2.5 bg-blue-700 hover:bg-blue-800 text-white rounded-lg text-sm font-medium transition-transform duration-150"
           >
             <FaGithub className="w-4 h-4" />
             View Code
           </motion.a>
           {liveLink && liveLink !== githubLink && (
-            <motion.a // Added motion to buttons
+            <motion.a
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              whileTap={{ scale: 0.9 }} // Prominent press animation
-              className="flex items-center gap-2 px-4 py-2.5 bg-cyan-700 hover:bg-cyan-800
-              text-white rounded-lg text-sm font-medium transition-transform duration-150"
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center gap-2 px-4 py-2.5 bg-cyan-700 hover:bg-cyan-800 text-white rounded-lg text-sm font-medium transition-transform duration-150"
             >
               <FaExternalLinkAlt className="w-4 h-4" />
               Live Demo
@@ -193,11 +172,10 @@ export default function Projects() {
         "Adept at collaborating with cross-functional teams to translate design concepts into fully functional web applications, maintaining code quality, performance optimization, and accessibility standards.",
       ],
       githubLink: "https://github.com/AnishKr-24/My_Portfolio",
-      date: "Fabuary 2025",
+      date: "February 2025",
       tags: ["React", "Redux", "Tailwind CSS", "UI/UX"],
       featured: false,
     },
-
     {
       image: DigitalyatraImage,
       title: "Digital Yatra",
@@ -211,36 +189,6 @@ export default function Projects() {
       tags: ["React", "Tailwind CSS", "Authentication"],
       featured: false,
     },
-
-    // Uncomment these if you want to include them
-    // {
-    //   image: WeatherImage,
-    //   title: "Weather App",
-    //   description: [
-    //     "Built a web application using Spring Boot to retrieve and display real-time weather data for any city using the OpenWeatherMap API.",
-    //     "Integrated Thyme leaf for dynamic UI rendering and used Rest Template for consuming RESTful API services",
-    //     "Utilized Java, Spring Boot, Maven, HTML/CSS, and the OpenWeatherMap API to deliver a responsive and user-friendly weather dashboard.",
-    //   ],
-    //   githubLink: "https://github.com/AnishKr-24/Weather-Application",
-    //   date: "April 2025",
-    //   tags: ["HTML", "CSS", "Thymeleaf", "Spring Boot", "Spring MVC", "Weather Api"],
-    //   featured: false,
-    // },
-
-    // {
-    //   image: EventImage,
-    //   title: "Event Management System",
-    //   description: [
-    //     "Built a full-stack Event Management System using the MERN stack (MongoDB, Express.js, React, Node.js) as part of a 4-member team, enabling event creation, user registration, and real-time attendee tracking",
-    //     "Developed responsive and interactive UI components using React, ensuring a seamless user experience for organizers and participants across devices.",
-    //     "Collaborated on backend development with Express.js and MongoDB, implementing RESTful APIs, user authentication, and efficient data handling for smooth system performance.",
-    //   ],
-    //   githubLink: "https://github.com/AnishKr-24/Event_Mern_stack_Project",
-    //   date: "March 2024",
-    //   tags: ["React", "MongoDB", "Node.js", "Express.js"],
-    //   featured: false,
-    // },
-
   ];
 
   return (
@@ -248,9 +196,9 @@ export default function Projects() {
       <SEO
         title={seoData.projects.title}
         description={seoData.projects.description}
-        name="@aashishgulshan" // Double-check if this twitter handle is correct or if you want to use @AnishKumar70923 as per your SEO config
+        name="@aashishgulshan"
       />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -270,14 +218,18 @@ export default function Projects() {
         </motion.div>
 
         <motion.div
-          variants={projectsContainerVariants} // Apply stagger to ProjectCards
+          variants={projectsContainerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-10"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center"
         >
           {projectsData.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <div key={project.title} className="flex justify-center">
+              <div className="w-full max-w-md">
+                <ProjectCard {...project} />
+              </div>
+            </div>
           ))}
         </motion.div>
       </div>
