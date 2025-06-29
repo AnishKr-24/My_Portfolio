@@ -180,7 +180,7 @@ export default function Projects() {
     },
     {
       image: DigitalyatraImage,
-      title: "Digital Yatra",
+      title: "Digi Yatra",
       description: [
         "Developed the frontend of the Digi Yatra web application using React, JavaScript, and Tailwind CSS, enabling smooth flight search, passenger detail entry, seat selection, and self-check-in.",
         "JavaScript and React were used to implement real-time flight search and filtering functionality, allowing users to easily find flights based on criteria like date, destination, and airline",
