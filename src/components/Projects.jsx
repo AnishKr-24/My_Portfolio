@@ -178,7 +178,7 @@ export default function Projects() {
       tags: ["React", "Redux", "Tailwind CSS", "UI/UX"],
       featured: false,
     },
-    {
+    { 
       image: DigitalyatraImage,
       title: "Digi Yatra",
       description: [
@@ -186,7 +186,7 @@ export default function Projects() {
         "JavaScript and React were used to implement real-time flight search and filtering functionality, allowing users to easily find flights based on criteria like date, destination, and airline",
         "Built responsive and reusable UI components to ensure a consistent and intuitive user experience across devices",
       ],
-      githubLink: "https://github.com/AnishKr-24/DigitalYatraNew",
+      githubLink: "https://github.com/AnishKr-24/Digi-Yatra/tree/main/src",
       date: "January 2025",
       tags: ["React", "Tailwind CSS", "Authentication"],
       featured: false,
